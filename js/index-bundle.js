@@ -18138,8 +18138,7 @@ var DrawerContent = function (_React$Component) {
                 _react2.default.createElement(
                     _List.List,
                     null,
-                    _react2.default.createElement(_List.ListItem, { onClick: this.handleClickListItem.bind(this, 'Overview'), primaryText: 'Overview', rightIcon: _react2.default.createElement(_dashboard2.default, null) }),
-                    _react2.default.createElement(_List.ListItem, { onClick: this.handleClickListItem.bind(this, 'Analyze'), primaryText: 'Analyze', rightIcon: _react2.default.createElement(_grade2.default, null) }),
+                    _react2.default.createElement(_List.ListItem, { onClick: this.handleClickListItem.bind(this, 'Question'), primaryText: 'Question', rightIcon: _react2.default.createElement(_dashboard2.default, null) }),
                     _react2.default.createElement(_List.ListItem, { onClick: this.handleClickListItem.bind(this, 'About'), primaryText: 'About', rightIcon: _react2.default.createElement(_allInclusive2.default, null) })
                 ),
                 _react2.default.createElement('div', { style: styles.logo })
@@ -18497,7 +18496,8 @@ var Main = function (_React$Component) {
 
     _this.state = {
       open: false,
-      title: '问卷调查'
+      title: '问卷调查',
+      pageKey: 'Question'
     };
 
 
@@ -18523,13 +18523,24 @@ var Main = function (_React$Component) {
     key: 'handleChangeDrawerItem',
     value: function handleChangeDrawerItem(_key, _nativeEvent) {
       //改变页
-      var _routerHistory = this.router.history;
-      if (_key == 'Overview') {
-        _routerHistory.replace('overview');
-      } else if (_key == 'About') {
-        _routerHistory.replace('about');
+      var title = '';
+      switch (_key) {
+        case 'Question':
+          title = '问卷调查';
+          break;
+        case 'About':
+          title = '关于我们';
+          break;
       }
-      this.setState({ open: false, title: _key });
+      if (this.state.pageKey != _key) {
+        var _routerHistory = this.router.history;
+        if (_key == 'Question') {
+          _routerHistory.replace('question');
+        } else if (_key == 'About') {
+          _routerHistory.replace('about');
+        }
+      }
+      this.setState({ open: false, pageKey: _key, title: title });
     }
   }, {
     key: 'render',
