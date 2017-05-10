@@ -4471,7 +4471,7 @@ return hooks;
 
 })));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(26), __webpack_require__(160)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24), __webpack_require__(160)(module)))
 
 /***/ }),
 /* 6 */,
@@ -18399,7 +18399,7 @@ var Login = function (_React$Component) {
 
 exports.default = Login;
 module.exports = exports['default'];
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(26)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24)))
 
 /***/ }),
 /* 401 */
@@ -18589,7 +18589,7 @@ var Main = function (_React$Component) {
 
 exports.default = Main;
 module.exports = exports['default'];
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(36), __webpack_require__(26)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(36), __webpack_require__(24)))
 
 /***/ }),
 /* 402 */
@@ -18982,7 +18982,7 @@ var Question = function (_React$Component) {
 
 exports.default = Question;
 module.exports = exports['default'];
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(26)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24)))
 
 /***/ }),
 /* 403 */
@@ -19236,7 +19236,7 @@ module.exports = exports['default'];
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global) {
+/* WEBPACK VAR INJECTION */(function(global, console) {
 
 var _react = __webpack_require__(0);
 
@@ -19258,9 +19258,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 global._currentPath = '/';
 global._currentPath = _url2.default.parse(document.URL).path;
+console.log('_currentPath:' + global._currentPath);
 
 _reactDom2.default.render(_react2.default.createElement(_MyRoutes2.default.IndexRouteConfig, null), document.getElementById('root'));
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(36)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(36), __webpack_require__(24)))
 
 /***/ }),
 /* 406 */,
@@ -19770,7 +19771,7 @@ function b64_enc (data) {
 }));
 //UMD FOOTER END
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(26)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24)))
 
 /***/ }),
 /* 413 */,
